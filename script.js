@@ -1,10 +1,16 @@
-const revString = (str) =>{
-  var revStr = " "
-  for(let i = str.length; i >= 0; i--){
-       revStr += str[i];
-  }
-  console.log(revStr);
-  return revStr;
+function twoSum(nums, target){
+    const comp = new Map();
+    const len = nums.length;
+
+    for(let i = 0; i< len; i++){
+        
+        if(comp[nums[i]] >= 0){
+            return [comp[nums[i]], i]
+        }
+        comp[target - nums[i]] = i;
+    } 
+    return [];
 }
 
-revString("I am Shailendra");
+const nums = [2, 7, 11, 15];
+console.log(twoSum(nums, 9));

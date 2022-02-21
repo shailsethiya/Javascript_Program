@@ -1,10 +1,10 @@
-const rotate = (arr, count = 1) => {
-    return [...arr.slice(count, arr.length), ...arr.slice(0, count)];
-};
-  
-const arr = [1,2,3,4,5];
+const revString = (str) =>{
+  var revStr = " "
+  for(let i = str.length; i >= 0; i--){
+       revStr += str[i];
+  }
+  console.log(revStr);
+  return revStr;
+}
 
-console.log(rotate(arr, 1));  // [2, 3, 4, 5, 1]
-console.log(rotate(arr, 2));  // [3, 4, 5, 1, 2]
-console.log(rotate(arr, -2)); // [4, 5, 1, 2, 3]
-console.log(rotate(arr, -1)); // [5, 1, 2, 3, 4]
+revString("I am Shailendra");

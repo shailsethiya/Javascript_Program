@@ -1,26 +1,24 @@
-function arm(n){
-const number = n;    
-const nolength = number.length;
-let sum = 0;
+// program to find the factorial of a number
 
- // create a temporary variable
-let temp = number;
-
-while (temp > 0) {
-
-let remainder = temp % 10;
-
-sum += remainder ** nolength;
-
-// removing last digit from the number
-temp = parseInt(temp / 10); // convert float into integer
+function factorial(n){
+// checking if number is negative
+if (n < 0) {
+    console.log('Error! Factorial for negative number does not exist.');
 }
-if (sum == number) {
-    alert(`${number} is an Armstrong number`);
+
+// if number is 0
+else if (n === 0) {
+    console.log(`The factorial of ${n} is 1.`);
 }
+
+// if number is positive
 else {
-    alert(`${number} is not an Armstrong number.`);
+    let fact = 1;
+    for (i = 1; i <= n; i++) {
+        fact *= i;
+    }
+    alert(`The factorial of ${n} is ${fact}.`);
 }
 }
 
-console.log(arm(153));
+factorial(5);

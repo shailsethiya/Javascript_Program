@@ -1,16 +1,26 @@
-function checkPrime(n){
-    let i, flag = true;
-    for(i = 2; i <= n - 1; i++)
-    if (n % i == 0) {
-        flag = false;
-        break;
-    }
-                  
-    // Check and display alert message
-    if (flag == true)
-        alert(n + " is prime");
-    else
-        alert(n + " is not prime");
+function arm(n){
+const number = n;    
+const nolength = number.length;
+let sum = 0;
+
+ // create a temporary variable
+let temp = number;
+
+while (temp > 0) {
+
+let remainder = temp % 10;
+
+sum += remainder ** nolength;
+
+// removing last digit from the number
+temp = parseInt(temp / 10); // convert float into integer
+}
+if (sum == number) {
+    alert(`${number} is an Armstrong number`);
+}
+else {
+    alert(`${number} is not an Armstrong number.`);
+}
 }
 
-console.log(checkPrime(7));
+console.log(arm(153));

@@ -1,23 +1,32 @@
-// Composition Polyfill
+// promise All
 
-function addFive(a){
-   return a + 5; // 23
+function showText(text, time){
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(text);
+    }, time);
+  });
+
 }
 
-function substractTwo(a){
-  return a - 2; // 18
+// polyfill
+function myPromiseAll(promises){
+  let result = [];
+  return new Promise((resolve, reject) => {
+    promises.forEach((p, index) => {
+       p.then((res) => {
+         result.push(res);
+         if(index === promises.length -1){
+           resolve(result);
+         }
+       }).catch((err) => reject(err)); 
+    });
+  });
 }
 
-function multiplyFour(a){
-  return a * 4;  // 20
-}
+// it will take promises if all of them are resolved it return all of the resolved result.
+// if any promise failed then all of the promises failed 
 
-const compose = (...functions) => {
-   return (args) => {
-    return functions.reduceRight((arg, fn) => fn(arg), args);
-   };
-};
-
-const evaluate = compose(addFive, substractTwo, multiplyFour);
-
-console.log(evaluate(5)); // 23
+Promise.all([showText("hello", 1000), Promise.resolve("hi")]).then((value) =>
+ console.log(value)
+ );

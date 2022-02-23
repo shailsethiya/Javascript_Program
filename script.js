@@ -1,17 +1,23 @@
-//call vs apply vs bind
+// Composition Polyfill
 
-var person = {
-  name: "shailendra sethiya",
-  hello: function (thing) {
-    console.log(this.name+ " says hello " + thing);
-  },
+function addFive(a){
+   return a + 5; // 23
+}
+
+function substractTwo(a){
+  return a - 2; // 18
+}
+
+function multiplyFour(a){
+  return a * 4;  // 20
+}
+
+const compose = (...functions) => {
+   return (args) => {
+    return functions.reduceRight((arg, fn) => fn(arg), args);
+   };
 };
 
-var alterEgo = {
-  name: "ss",
-};
+const evaluate = compose(addFive, substractTwo, multiplyFour);
 
-person.hello.call(alterEgo, "world"); // call 
-person.hello.apply(alterEgo, ["world"]); // apply
-const newHello = person.hello.bind(alterEgo); // bind
-newHello("world");
+console.log(evaluate(5)); // 23

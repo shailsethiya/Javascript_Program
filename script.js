@@ -1,6 +1,6 @@
-function evenOdd(number) {
-  const result = (number % 2  == 0) ? "even" : "odd";
-  document.write("result===", result)
+function findlargestNowWithMethod() {
+  const largestNo = Math.max(3,4,5,6,7,9);
+  console.log(largestNo);
 }
 
-   evenOdd(7);
+findlargestNowWithMethod();

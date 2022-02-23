@@ -1,13 +1,5 @@
-function generatePyramid() {
-  var totalNumberofRows = 5;
-  var output = '';
-  for (var i = 1; i <= totalNumberofRows; i++) {
-      for (var j = 1; j <= i; j++) {
-          output += j + '  ';
-      }
-      console.log(output);
-      output = '';
-  }
+function reverseWord(str) {
+console.log(str.split(' ').map((str) => str.split('').reverse().join('')).join(' '));
 }
 
-generatePyramid();
+reverseWord("Hello World");

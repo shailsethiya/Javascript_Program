@@ -1,28 +1,17 @@
-function a(){
-  for(var i =0; i<3; i++){
-    setTimeout(function log(){
-      console.log(i);
-    }, i * 1000)
-  }
-}
+//call vs apply vs bind
 
-// 3 
-// 3
-// 3
+var person = {
+  name: "shailendra sethiya",
+  hello: function (thing) {
+    console.log(this.name+ " says hello " + thing);
+  },
+};
 
-a();
+var alterEgo = {
+  name: "ss",
+};
 
-
-function a(){
-  for(let i =0; i<3; i++){
-    setTimeout(function log(){
-      console.log(i);
-    }, i * 1000)
-  }
-}
-
-// 0 
-// 1
-// 2
-
-a();
+person.hello.call(alterEgo, "world"); // call 
+person.hello.apply(alterEgo, ["world"]); // apply
+const newHello = person.hello.bind(alterEgo); // bind
+newHello("world");

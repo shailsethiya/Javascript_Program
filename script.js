@@ -1,5 +1,5 @@
 function findlargestNowWithMethod() {
-  const largestNo = Math.max(3,4,5,6,7,9);
+  const largestNo = Math.min(3,4,5,6,7,9);
   console.log(largestNo);
 }
 

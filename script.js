@@ -1,6 +1,13 @@
-function findlargestNowWithMethod() {
-  const largestNo = Math.min(3,4,5,6,7,9);
-  console.log(largestNo);
+function findlargestNowWithoutMethod() {
+  let array = [3 , 6, 2, 56, 32, 5, 89, 32];
+  let largest= 0;
+  
+  for (i=0; i<=largest;i++){
+      if (array[i]>largest) {
+          largest=array[i];
+      }
+  }
+  console.log(largest);
 }
 
-findlargestNowWithMethod();
+findlargestNowWithoutMethod();

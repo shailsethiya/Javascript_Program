@@ -1,13 +1,13 @@
-function findlargestNowWithoutMethod() {
+function findsmallestNowWithoutMethod() {
   let array = [3 , 6, 2, 56, 32, 5, 89, 32];
-  let largest= 0;
+  let smallest= array[0];
   
-  for (i=0; i<=largest;i++){
-      if (array[i]>largest) {
-          largest=array[i];
+  for (i=0; i<=array.length;i++){
+      if (array[i] < smallest) {
+        smallest=array[i];
       }
   }
-  console.log(largest);
+  console.log(smallest);
 }
 
-findlargestNowWithoutMethod();
+findsmallestNowWithoutMethod();

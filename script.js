@@ -56,6 +56,6 @@ for(let i = 0; i<=10; i++) {
     console.log(i);  // 0 - 10
     } 
     
-    console.log(i); // not defined
+    console.log(i); // reference error : not defined
 
  /*====================================================================================*/   

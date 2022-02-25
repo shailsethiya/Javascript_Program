@@ -1,3 +1,5 @@
+//1*1*1 + 5*5*5 + 3*3*3 = 1 + 125 + 27
+
 function arm(n){
 const number = n;    
 const nolength = number.length;
@@ -8,9 +10,9 @@ let temp = number;
 
 while (temp > 0) {
 
-let remainder = temp % 10;
+let rem = temp % 10;
 
-sum += remainder ** nolength;
+sum += rem * rem * rem;
 
 // removing last digit from the number
 temp = parseInt(temp / 10); // convert float into integer

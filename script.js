@@ -36,7 +36,7 @@ for(var i =0; i<=10; i++) {
    
 for(let i =0; i<=10; i++) {
     setTimeOut(()=>{
-    console.log(i); // 0-10 print  (every iteration new value bind )
+    console.log(i); // 0-11 print  (every iteration new value bind )
     },2000);
     }
         
@@ -45,7 +45,7 @@ for(let i =0; i<=10; i++) {
  /*=====================================================================================*/   
 
  for(var i =0; i<=10; i++) { 
-    console.log(i);  // 0 - 10 value 
+    console.log(i);  // 0 - 11 value 
     } 
     
     console.log(i); // 11
@@ -53,7 +53,7 @@ for(let i =0; i<=10; i++) {
 /*=====================================================================================*/
 
 for(let i = 0; i<=10; i++) { 
-    console.log(i);  // 0 - 10
+    console.log(i);  // 0 - 11
     } 
     
     console.log(i); // reference error : not defined

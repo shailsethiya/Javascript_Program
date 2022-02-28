@@ -13,7 +13,7 @@ abc();
 
 
 /*=============================================================================*/
-//because of hosting it will decalre the value of x
+//because of hosting it will decalre the value of x on the top 
 
 var x = 10; 
 function test() {

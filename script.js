@@ -1,3 +1,5 @@
+//Hosting 
+
 function abc(){
     console.log(a); // undefined 
     console.log(b); // reference error 
@@ -13,7 +15,7 @@ abc();
 
 
 /*=============================================================================*/
-//because of hosting it will decalre the value of x on the top 
+//because of hosting it will decalre the value of x on the top of the scope 
 
 var x = 10; 
 function test() {
@@ -59,3 +61,35 @@ for(let i = 0; i<=10; i++) {
     console.log(i); // reference error : not defined
 
  /*====================================================================================*/   
+
+ console.log(a); // undefined 
+
+ console.log(abc);  //  ƒ abc(){ console.log("abc"); }
+
+ var a = "hello";
+
+ function abc(){
+     console.log("abc");
+ }
+
+ /*====================================================================================*/
+
+ console.log(a); // referece error : a is not defined 
+
+ console.log(abc);
+
+ function abc(){
+     console.log("a");
+ }
+
+ /*===================================================================================*/
+
+  abc();   // a 
+
+ console.log("hello"); // hello
+
+ function abc(){
+     console.log("a");
+ }
+
+ /************************************************************************************* */

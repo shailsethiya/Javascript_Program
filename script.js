@@ -93,3 +93,20 @@ for(let i = 0; i<=10; i++) {
  }
 
  /************************************************************************************* */
+
+ console.log(abc);  // ReferenceError: abc is not defined
+
+ const arrowFunc =  () => {
+     console.log("arrow fun"); //beacause it's use as variable & assign undefined in the scope.
+} 
+
+/*****************************************************************************************/
+
+console.log(abc);  // ReferenceError: abc is not defined
+
+ const arrowFunc =  function () {
+     console.log("arrow fun"); //beacause it's use as variable & assign undefined in the scope.
+} 
+
+/******************************************************************************************/
+

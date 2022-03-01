@@ -17,4 +17,29 @@ const output = users.reduce((acc, curr) => {
     return acc;
     }, {});
 
-    console.log(output);
+console.log(output);
+
+/************************************************************************************ */
+
+const abc = users.map((x) => x.firstName + " " + x.lastName);
+
+console.log(abc);
+
+/******************************************************************************* */
+
+const fil =  users.filter((x) =>  x.age < 30).map((x) => x.firstName);
+
+
+/******************************************************************************** */
+
+const red = users.reduce((acc, cur) => { 
+         if(cur.age < 30){
+            acc=[...acc, cur.firstName ];
+         }
+         return acc;
+        }, [])
+
+console.log(red);
+
+console.log(fil);
+

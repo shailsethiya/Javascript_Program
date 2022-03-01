@@ -1,21 +1,20 @@
-var  xyz = new Promise((resolve, reject) => {
-console.log(resolve);
-resolve();
-}).then(() => {
-   console.log("do this");
-}).catch(() => {
-    console.log("error");
-}).then(() => {
-    console.log("do this 2");
+console.log("start");
+
+setTimeout(function CBT(){
+    console.log("CB Settimeout");
+}, 5000);
+
+fetch("/url").then(function cbf(){
+    console.log("cb netflix");
 });
 
-/**************************************************************************************** */
 
-Promise.resolve().then(() => console.log(2));
-console.log(1); // 1,2 
+console.log("end");
 
 
-/**************************************************************************************** */
-
-// Promise.all() - Wait for all promises to be resolved, or for any to be rejected.
-// Promise.allSettled() - Wait until all promises have settled (each may resolve or reject).
+/* GEX
+   first print start // top to bottom
+   second print end    // setTimeout & fetch will take time, so js nothing wait here.
+   third print cb netflix  // promise callback have prority & it's come in mircotask queue
+   fourth print cb settimeout // callback queue after callstack empty immediately event loop send to the callstack.
+*/

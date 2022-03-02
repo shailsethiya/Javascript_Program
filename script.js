@@ -47,7 +47,24 @@ const names = [{id:1,fName:'Shailendra',lName:'Sethiya', age:20},
 {id:2,fName:'Shailendra',lName:'Sethiya', age:25},
 {id:1,fName:'Shailendra',lName:'Sethiya', age:25}]
 
-names.forEach(function (x) { counts[x.age] = (counts[x.age] || 0) + 1;});
+names.forEach(function (x) { counts[x.age] = (counts[x.age] || 0) + 1});
 console.log(counts)
 
 // output - {20: 1, 25: 2}
+
+/*********************************************************************************** */
+
+//with the help of reduce method
+
+const users = [{id:1,fName:'Shailendra',lName:'Sethiya', age:20},
+{id:2,fName:'Shailendra',lName:'Sethiya', age:25},
+{id:3,fName:'Shailendra',lName:'Sethiya', age:25}];
+
+const red = users.reduce((acc, curr) => { 
+    if(acc[curr.age]){
+        acc[curr.age] = ++acc[curr.age];
+    } else {
+        acc[curr.age] = 1;
+    }
+    return acc;
+    }, {});

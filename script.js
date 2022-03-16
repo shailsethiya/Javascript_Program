@@ -2,7 +2,6 @@
 
 function arm(n){
 const number = n;    
-const nolength = number.length;
 let sum = 0;
 
  // create a temporary variable

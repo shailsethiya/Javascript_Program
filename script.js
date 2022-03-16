@@ -68,3 +68,29 @@ const red = users.reduce((acc, curr) => {
     }
     return acc;
     }, {});
+
+    
+/**************************************************************************************** */
+
+const person = [{id:1,fName:'Shailendra',lName:'Sethiya', age:20},
+{id:2,fName:'Shailendra',lName:'Sethiya', age:25},
+{id:3,fName:'Shailendra',lName:'Sethiya', age:25},
+{id:4,fName:'Shailendra',lName:'Sethiya', age:25},
+{id:5,fName:'Shailendra',lName:'Sethiya', age:20}];
+
+const personFilter = person.reduce((acc, curr) => { 
+    if(acc[curr.age]){
+        acc[curr.age] = ++acc[curr.age];
+    } else {
+        acc[curr.age] = 1;
+    }
+    return acc;
+    }, {});
+
+/*********************************************************************************************** */
+
+const personFilter = person.reduce((acc, curr) => { acc[curr.age] ? ++acc[curr.age] : acc[curr.age] = 1;
+    return acc;
+    }, {});
+
+/********************************************************************************************** */

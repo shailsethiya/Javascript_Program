@@ -9,7 +9,8 @@ arr.sort(function(a, b){return b-a})
 /*second largest number from array*/
 
 var arr  = [2, 5, 6, 3, 4]
-arr.sort(function(a, b){return b-a})[1]
+arr.sort(function(a, b){return b-a})
+console.log(arr[1]);
 
 // output - 5
 

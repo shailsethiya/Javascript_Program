@@ -10,7 +10,7 @@ for (let i = 1; i <= n; i++) {
 }
 console.log(string);
 
-Output -
-1
-1 4
-1 4 9
+// Output -
+// 1
+// 1 4
+// 1 4 9

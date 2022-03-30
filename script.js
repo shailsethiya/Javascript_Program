@@ -1,3 +1,5 @@
+//*Deep Copy Example*
+
 let obj = {
   firstName: "shailendra",
   lastName: "sethiya",
@@ -7,6 +9,8 @@ let obj = {
   },
   mobile: [25, 26]
 };
+
+console.log("obj==", obj);
 
 function deepCopy(obj) {
   let ob = {};
@@ -23,4 +27,22 @@ function deepCopy(obj) {
 }
 
 const obj2 = deepCopy(obj);
-console.log(obj2);
+console.log("obj2===", obj2);
+
+/***************************************************************************************************/
+
+var employee = {
+  eid: "E102",
+  ename: "Jack",
+  eaddress: "New York",
+  salary: 50000
+}
+console.log("=========Deep Copy========");
+var newEmployee = JSON.parse(JSON.stringify(employee));
+console.log("Employee=> ", employee);
+console.log("New Employee=> ", newEmployee);
+console.log("---------After modification---------");
+newEmployee.ename = "Beck";
+newEmployee.salary = 70000;
+console.log("Employee=> ", employee);
+console.log("New Employee=> ", newEmployee);

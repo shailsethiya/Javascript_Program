@@ -1,17 +1,83 @@
-function range(start, end) {
-    return Array(end - start + 1).fill().map((_, idx) => start + idx)
-  }
-  var result = range(9, 18); // [9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
-  console.log(result);
+const showRoom = [
+    {id: 1, name: 'Maruti', model: 'Baleno' },
+    {id: 2, name: 'Toyoto', model: 'Fortuner'},
+    {id: 3, name: 'Mahindra', model: 'scorpio'},
+    {id: 4, name: 'Tata', model: 'safari' }
+];
 
-  /******************************************************************************** */
+for(let i=0; i< showRoom.length; i++){
+    console.table(showRoom[i].name)
+}
 
-  const arr = Array.from(Array(10).keys());
-  console.log(arr);
+/**************************************************************************************************** */
 
-  /********************************************************************************** */
+const showRoom = [
+    {id: 1, name: 'Maruti', model: 'Baleno' },
+    {id: 2, name: 'Toyoto', model: 'Fortuner'},
+    {id: 3, name: 'Mahindra', model: 'scorpio'},
+    {id: 4, name: 'Tata', model: 'safari' }
+];
 
-  const arr1  = [...Array(10).keys()];
-  console.log(arr1);
+showRoom.forEach((car, index, showRoom) => {
+    console.table(`Name: ${car.name} Model: ${car.model} `)
+});
 
-  /*************************************************************************************** */
+/****************************************************************************************************** */
+
+const showRoom = [
+    {id: 1, name: 'Maruti', model: 'Baleno' },
+    {id: 2, name: 'Toyoto', model: 'Fortuner'},
+    {id: 3, name: 'Mahindra', model: 'scorpio'},
+    {id: 4, name: 'Tata', model: 'safari' }
+];
+
+for(let car of showRoom){
+    console.log(car.name);
+}
+
+/**************************************************************************************************** */
+
+const showRoom = [
+    {id: 1, name: 'Maruti', model: 'Baleno' },
+    {id: 2, name: 'Toyoto', model: 'Fortuner'},
+    {id: 3, name: 'Mahindra', model: 'scorpio'},
+    {id: 4, name: 'Tata', model: 'safari' }
+];
+
+let i = 0;
+while(i<showRoom.length){
+    console.log(showRoom[i].name)
+    i++
+}
+
+/************************************************************************************************************* */
+
+const showRoom = [
+    {id: 1, name: 'Maruti', model: 'Baleno' },
+    {id: 2, name: 'Toyoto', model: 'Fortuner'},
+    {id: 3, name: 'Mahindra', model: 'scorpio'},
+    {id: 4, name: 'Tata', model: 'safari' }
+];
+
+let i = 0;
+
+do{
+    console.log(showRoom[i].name)
+    i++
+}
+while(i<showRoom.length)
+
+/*************************************************************************************************** */
+
+const showRoom = [
+    {id: 1, name: 'Maruti', model: 'Baleno' },
+    {id: 2, name: 'Toyoto', model: 'Fortuner'},
+    {id: 3, name: 'Mahindra', model: 'scorpio'},
+    {id: 4, name: 'Tata', model: 'safari' }
+];
+
+let car = showRoom.map(showRoom => showRoom.name);
+
+console.log(car);
+
+/********************************************************************************************************** */

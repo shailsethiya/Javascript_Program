@@ -28,5 +28,17 @@ function myPromiseAll(promises){
 // if any promise failed then all of the promises failed 
 
 Promise.all([showText("hello", 1000), Promise.resolve("hi")]).then((value) =>
- console.log(value)
+ console.log("Promise.all=======", value)
+ );
+
+ Promise.allSettled([showText("hello", 1000), Promise.resolve("hi")]).then((value) =>
+ console.log("Promise.allSettled=======", value)
+ );
+
+ Promise.any([showText("hello", 1000), Promise.resolve("hi")]).then((value) =>
+ console.log("Promise.any=======", value)
+ );
+
+ Promise.race([showText("hello", 1000), Promise.resolve("hi")]).then((value) =>
+ console.log("Promise.race=======", value)
  );

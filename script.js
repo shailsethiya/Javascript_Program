@@ -5,10 +5,20 @@ function constfuncs() {
     return funcs; // 10
     }
     var funcs = constfuncs();
-    console.log(func[5]())
+    console.log(funcs[5]())
 
-/******************************************************************************** */    
+/******************************************************************************** */  
 
+function constfuncs() {
+var funcs = [];
+for(let i = 0; i< 10; i++)
+funcs[i] = function() { return i; };
+return funcs; // 5
+}
+var funcs = constfuncs();
+console.log(funcs[5]())
+
+/********************************************************************************************* */
 function changeStuff(a, b, c)
 {
 a = a * 10;

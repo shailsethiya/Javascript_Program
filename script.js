@@ -1,3 +1,11 @@
+// Find the largest common prefix in the array of strings
+// array = ["abcxy", "abc123", "abctest1", "abctest2"] 
+// output = "abc"
+// array = ["atest", "abc123", "abctest1", "abctest2"] 
+// output = "a"
+// array = ["test", "abc123", "abctest1", "abctest2"] 
+// output = No prefix
+
 function longest_common_starting_substring(arr1){
   var arr= arr1.concat().sort(),
   a1= arr[0], a2= arr[arr.length-1], L= a1.length, i= 0;

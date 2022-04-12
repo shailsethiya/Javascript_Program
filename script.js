@@ -48,7 +48,7 @@ let array=[1,2,3,5,9]
 let array1=[4,6,7,8]
 
 let sortedArray=[...array,...array1].sort()
-console.log(sortedArray) 
+console.log("sortedArray", sortedArray) 
 
 
 /*=======================================================================================*/
@@ -57,7 +57,7 @@ console.log(sortedArray)
 
 var a=[1,2,3,5,9];
 var b=[4,6,7,8];
-var c = a.concat(b).sort((a,b)=>a > b);
-console.log(c)
+var c = a.concat(b).sort((a,b)=>a - b);
+console.log("c", c)
 
 /*========================================================================================*/
